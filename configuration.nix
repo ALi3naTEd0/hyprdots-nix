@@ -10,7 +10,6 @@
 
   imports = [
     ./hardware-configuration.nix
-    ./vm.nix
   ];
 
   # ===== Boot Configuration =====
