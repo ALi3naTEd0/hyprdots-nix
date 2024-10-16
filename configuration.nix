@@ -13,20 +13,22 @@
   ];
 
   # ===== Boot Configuration =====
-  boot.loader.systemd-boot.enable = true;
+  #boot.loader.systemd-boot.enable = true;
   boot.kernelPackages = pkgs.linuxPackages_zen;
   boot.supportedFilesystems = [ "ntfs" ];
 
-  # Bootloader dual-boot
-  #boot.loader = {
-  #  grub = {
-  #    device = "nodev";
-  #    enable = true;
-  #    useOSProber = true;
-  #    efiSupport = true;
-  #  };
-  #  efi.canTouchEfiVariables = true;
-  #};
+  #! Enable grub below, note you will have to change to the new bios boot option for settings to apply
+  boot = {
+    loader = {
+      efi.canTouchEfiVariables = true;
+      grub = {
+        enable = true;
+        device = "nodev";
+        efiSupport = true;
+        useOSProber = true;
+      };
+    };
+  };
 
   # ===== Hardware Configuration =====
   hardware = {
@@ -210,7 +212,6 @@
     anydesk
     btop
     chromium
-    code-cursor
     discord
     distrobox
     electron
@@ -245,13 +246,6 @@
     nodejs_18
     ntfs3g
     obsidian
-    #(assert (lib.assertMsg (obsidian.version == "1.4.16") "obsidian: has wayland crash been fixed?");
-    #  obsidian.override {
-    #    electron = electron_24.overrideAttrs (_: {
-    #      preFixup = "patchelf --add-needed ${libglvnd}/lib/libEGL.so.1 $out/bin/electron"; # NixOS/nixpkgs#272912
-    #      meta.knownVulnerabilities = []; # NixOS/nixpkgs#273611
-    #    });
-    #  })
     onlyoffice-bin_latest
     pipx
     plex
