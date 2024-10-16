@@ -209,8 +209,11 @@
     android-studio-tools
     anydesk
     btop
+    chromium
+    code-cursor
     discord
     distrobox
+    electron
     element-desktop
     enpass
     fastfetch
@@ -220,6 +223,7 @@
     fsearch
     gh
     git
+    glib
     gnome-disk-utility
     htop
     hypnotix
@@ -234,8 +238,9 @@
     looking-glass-client
     mediainfo
     mediainfo-gui
-    neofetch
+    mlocate
     mkvtoolnix
+    neofetch
     nicotine-plus
     nodejs_18
     ntfs3g
@@ -283,7 +288,7 @@
     qemu
     qemu_full
     vde2
-    #virt-manager
+    virt-manager
     libvirt-glib
     OVMF
     swtpm
