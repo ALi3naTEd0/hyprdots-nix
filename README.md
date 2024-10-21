@@ -89,7 +89,7 @@ before going further, please read the [considerations](#considerations--module-i
      ```
 * Update waybar killall command in all hyprdots files
      ```bash
-        find $HOME/.local/share/bin -type f -print0 | xargs -0 sed -i 's/killall .waybar/killall .waybar-wrapped/g'
+        find $HOME/.local/share/bin -type f -print0 | xargs -0 sed -i 's/killall .waybar/killall .waybar-wrapped/g
         Hyde waybar reload```
 
 ## considerations & module installation
