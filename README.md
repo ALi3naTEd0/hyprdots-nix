@@ -88,8 +88,9 @@ before going further, please read the [considerations](#considerations--module-i
      nix run .
      ```
 * Update waybar killall command in all hyprdots files
-`find $HOME/.local/share/bin -type f -print0 | xargs -0 sed -i 's/killall .waybar/killall .waybar-wrapped/g'`
-`Hyde waybar reload`
+     ```bash
+        find $HOME/.local/share/bin -type f -print0 | xargs -0 sed -i 's/killall .waybar/killall .waybar-wrapped/g'
+        Hyde waybar reload```
 
 ## considerations & module installation
 
