@@ -62,10 +62,10 @@ before going further, please read the [considerations](#considerations--module-i
 `. /home/yourusername/.nix-profile/etc/profile.d/nix.sh`
 
 3. Enable experimental features
-  ```bash
-  mkdir -p ~/.config/nix
-  nano ~/.config/nix/nix.conf
-  ```
+   ```bash
+   mkdir -p ~/.config/nix
+   nano ~/.config/nix/nix.conf
+   ```
 
 4. Add the following to nix.conf:
 `experimental-features = nix-command flakes`
