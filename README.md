@@ -54,6 +54,37 @@ before going further, please read the [considerations](#considerations--module-i
      sudo nixos-rebuild switch --flake .#hyprdots-nix
      reboot
      ```
+## installation as a vm / arch host
+1. Install Nix
+`curl -L https://nixos.org/nix/install | sh`
+
+2. Activate Nix environment
+`. /home/yourusername/.nix-profile/etc/profile.d/nix.sh`
+
+3. Enable experimental features
+`mkdir -p ~/.config/nix`
+`nano ~/.config/nix/nix.conf`
+
+4. Add the following to nix.conf:
+`experimental-features = nix-command flakes`
+
+5. clone this repository:
+
+   ```bash
+   git clone https://github.com/richen604/hyprdots-nix.git
+   cd hyprdots-nix
+   ```
+6. edit `flake.nix`:
+   - replace `<username>`, `<host>`, and github settings with your info
+   - a default password is given for sudo usage in the vm
+   - feel free to change it with passwd when you login
+
+7. build and switch to your new configuration:
+
+   - using a vm (recommended):
+     ```bash
+     nix run .
+     ```
 
 ## considerations & module installation
 
